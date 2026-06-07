@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+                   initial-scale=1.0">
+    <title>LED Circuit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="background">
+    <div class="navbar">
+        <h1 class="head">LED circuit</h1>
+        <div class="navbar-card">
+            <a href="#components">Components</a>
+            <a href="#calculation">Calculation</a>
+            <a href="#lessons">Lessons</a>
+        </div>
+    </div>
+    <main class="main-content">
+        <section id="components">
+            <h2 class="head">Components</h2>
+            <div class="component-card">
+                <div class="list-style">
+                    <table class="component-table">
+                        <tr>
+                            <th>Components</th>
+                            <th>Value</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Resistor * 1</td>
+                            <td>470 Ω</td>
+                            <td>Current Limiting</td>
+                            <td>Verified</td>
+                        </tr>
+                        <tr>
+                            <td>Battery</td>
+                            <td>9V DC</td>
+                            <td>Power Supply</td>
+                            <td>Verified</td>
+                        </tr>
+                        <tr>
+                            <td>Breadboard</td>
+                            <td>830tie-points</td>
+                            <td>prototyping</td>
+                            <td>Verified</td>
+                        </tr>
+                        <tr>
+                            <td>LED * 3</td>
+                            <td>2V,20mA (max)</td>
+                            <td>Visual Output</td>
+                            <td>Verified</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+        <section id="calculation">
+            <div>
+                <h2>Ohm's Law Calculation</h2>
+                <pre>
+                Formula  : R = (Vs - Vf) / If
+                Vs       : 9V (Source)
+                Vf       : 2V (LED forward voltage)
+                If       : 0.015A (15mA target 20mA (max))
+                __________________________________________
+
+                Result   : (9-2) / 0.015 =466.67 ohm
+                Standard : 470 ohm
+               </pre>
+            </div>
+        </section>
+        <section id="lessons">
+            <h2 class="head">I Learned in this project</h2>
+            <div class="project-info">
+                <div>
+                    <h2>1) Series Circuits have a single current path</h2>
+                    <p>One open connection kills all LEDs simultaneously</p>
+                </div>
+                <div>
+                    <h2>2) Resistors are never optional</h2>
+                    <p>Without one, current is 70x the LEDs rated maximulm-instant destruction</p>
+                </div>
+                <div>
+                    <h2>3) Voltage divides in series, current stays constant</h2>
+                    <p>3 * 2V = 6V across LEDs, remaining 3V across resistor</p>
+                </div>
+                <div>
+                    <h2>4) Always calculate R before connecting power</h2>
+                    <p>R = (Vs - Vf) / If - memorise this formula</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

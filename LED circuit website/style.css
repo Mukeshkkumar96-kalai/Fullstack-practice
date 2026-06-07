@@ -1,0 +1,103 @@
+.head {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3f2a24;
+    text-align: center;
+}
+
+.html {
+    scroll-behaviou: smooth;
+}
+
+.navbar {
+    padding: 15px;
+    background-color: #e6c5a8;
+    border-radius: 20px;
+    margin: 30px;
+    text-align: center;
+    width: 200px;
+    min-height: 90vh;
+}
+
+.navbar-card {
+    padding: 10px;
+    margin: 15px;
+    flex-direction: column;
+    display: flex;
+}
+
+.navbar-card a {
+    display: block;
+    padding: 10px;
+    margin: 8px 0;
+    text-decoration: none;
+    color: #3f2a24;
+    background-color: #f5dfc0;
+    border-radius: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.navbar-card a:hover {
+    background-color: #3f2a24;
+    color: #e6c5a8;
+}
+
+.background {
+    margin: 0px;
+    background-color: bisque;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.component-card {
+    padding: 20px;
+    background-color: #c8b6a6;
+    border-radius: 8px;
+    margin: 15px;
+}
+
+.list-style {
+    list-style-type: none;
+}
+
+.component-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.component-table th,
+.component-table td {
+    border: 1px solid #3f2a24;
+    padding: 8px 16px;
+    font-family: arial, sans-serif;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+#calculation {
+    padding: 2rem;
+    text-align: center;
+}
+
+#calculation pre {
+    background-color: #3f2a24;
+    color: #e6c5a8;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: left;
+    line-height: 2;
+}
+
+.project-info {
+    padding: 20px;
+    color: #ffffff;
+    background-color: #2f2f2f;
+    border-radius: 8px;
+    margin: 20px;
+}
