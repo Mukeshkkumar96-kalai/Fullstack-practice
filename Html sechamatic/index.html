@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The example structure with ai (laterly I implemented code)-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+    viewport meta is critical for field dashboards —
+    farm managers often check on mobile devices
+  -->
+    <title>AgriSense — Zone A Monitor</title>
+</head>
+
+<body>
+
+    <!-- LANDMARK: Skip navigation for accessibility compliance-->
+    <a href="#main-content" class="skip-link">Skip to readings</a>
+
+    <header role="banner">
+        <h1>AgriSense Dashboard</h1>
+        <nav aria-label="Zone Navigation">
+            <ul>
+                <li><a href="#zone-a" aria-current="page">Zone A</a></li>
+                <li><a href="#zone-b">Zone B</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT: This is where your React components will live
+    eventually — but the semantic skeleton stays the same-->
+    <main id="main-content">
+
+        <section id="zone-a" aria-labelledby="zone-a-heading">
+            <h2 id="zone-a-heading">Field Zone A — Live Readings</h2>
+
+            <!-- 
+        Each sensor reading is an <article> because it is:
+        - Self-contained
+        - Independently meaningful
+        - Could be syndicated or extracted on its own
+      -->
+
+            <article aria-labelledby="soil-temp-label">
+                <h3 id="soil-temp-label">Soil Temperature</h3>
+
+                <!--
+          <data> element: value="" holds the raw machine value
+          Inner text holds human-readable formatted string
+          Your JS will update data-* attributes and value dynamically
+        -->
+                <data value="34.2" data-unit="celsius" data-sensor-id="ESP32-ZA-01" data-status="normal">
+                    34.2 °C
+                </data>
+
+                <!--
+          <time> element: datetime="" must be ISO 8601 format
+          This is what your database query and chart library reads
+        -->
+                <footer>
+                    <p>Last updated:
+                        <time datetime="2026-06-09T08:32:00+05:30">
+                            09 Jun 2026, 8:32 AM IST
+                        </time>
+                    </p>
+                </footer>
+            </article>
+
+            <article aria-labelledby="soil-moisture-label">
+                <h3 id="soil-moisture-label">Soil Moisture</h3>
+                <data value="62" data-unit="percent" data-sensor-id="ESP32-ZA-01" data-status="optimal">
+                    62%
+                </data>
+                <footer>
+                    <p>Last updated:
+                        <time datetime="2026-06-09T08:32:00+05:30">
+                            09 Jun 2026, 8:32 AM IST
+                        </time>
+                    </p>
+                </footer>
+            </article>
+
+        </section>
+
+        <!-- ============================================================
+      ADVISORY SECTION: This is where your crop AI output appears
+      Note: <aside> is WRONG here — advisory IS primary content
+    ============================================================ -->
+        <section aria-labelledby="advisory-heading">
+            <h2 id="advisory-heading">Crop Advisory</h2>
+            <article>
+                <h3>Irrigation Recommendation</h3>
+                <p>Soil moisture is within optimal range.
+                    Next scheduled irrigation: <time datetime="2026-06-10T06:00:00+05:30">
+                        Tomorrow, 6:00 AM
+                    </time>
+                </p>
+                <!--
+          data-confidence will eventually be populated by
+          your Python ML model's output score
+        -->
+                <footer>
+                    <p>Advisory confidence: <data value="0.91">91%</data></p>
+                </footer>
+            </article>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>AgriSense v1.0 — ESP32 Node Firmware v2.3.1</p>
+    </footer>
+
+</body>
+
+</html>
