@@ -1,0 +1,145 @@
+.head {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3f2a24;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    padding: 15px;
+    background-color: #e6c5a8;
+    text-align: center;
+    width: 200px;
+    min-height: 90vh;
+}
+
+.navbar-card {
+    padding: 10px;
+    margin: 15px;
+    flex-direction: column;
+    display: flex;
+}
+
+.navbar-card a {
+    display: block;
+    padding: 10px;
+    margin: 8px 0;
+    text-decoration: none;
+    color: #3f2a24;
+    background-color: #f5dfc0;
+    border-radius: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.navbar-card a:hover {
+    background-color: #3f2a24;
+    color: #e6c5a8;
+}
+
+.background {
+    margin: 0px;
+    background-color: bisque;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.component-card {
+    padding: 20px;
+    background-color: #c8b6a6;
+    border-radius: 8px;
+    margin: 15px;
+}
+
+.list-style {
+    list-style-type: none;
+}
+
+.component-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.component-table th,
+.component-table td {
+    border: 1px solid #3f2a24;
+    padding: 8px 16px;
+    font-family: arial, sans-serif;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+#calculation {
+    padding: 2rem;
+    text-align: center;
+}
+
+#calculation pre {
+    background-color: #3f2a24;
+    color: #e6c5a8;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: left;
+    line-height: 2;
+}
+
+.project-info {
+    padding: 20px;
+    color: #ffe4c4;
+    background-color: #a54b3b;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.future {
+    margin: 0 auto;
+    border-collapse: collapse;
+    color: #3f2a24;
+}
+
+.future th,
+.future td {
+    border: 1px solid #271b17;
+    padding: 8px 16px;
+    font-family: arial, sans-serif;
+}
+
+.future-card {
+    padding: 20px;
+    background-color: #e9b587;
+    border-radius: 8px;
+    margin: 15px;
+}
+
+.project-image {
+    height: 70vh;
+    width: 80vw;
+    margin: 20px;
+}
+
+.photo-caption {
+    text-align: center;
+    color: #3f2a24;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+.overview-text {
+    padding: 20px;
+    font-size: 17px;
+    background-color: #d17f71;
+    text-align: center;
+    border-radius: 8px;
+    color: #1d0701;
+    font-style: italic;
+    margin-top: -10px;
+}
